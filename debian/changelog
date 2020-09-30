@@ -1,3 +1,25 @@
+ifupdown (0.8.36~1.gbp8ec8d5) UNRELEASED; urgency=medium
+
+  ** SNAPSHOT build @8ec8d5031c71200da224e69459d2d02aa2244ddd **
+
+  [ Janos Lenart ]
+  * Fixed source interfaces.d/
+
+  [ Guus Sliepen ]
+  * Really strip VLAN and alias ids when bringing hotplug interfaces up.
+  * Have the init script ignore hotplug interfaces that are already up. Closes: #838871
+  * Allow disabling of client-identifier option for IPv4 dhclient. Closes: #923640
+  * Fix ping check loginc in ifupdown-wait-online.service. Closes: #952455
+
+  [ Andrej Shadura ]
+  * Change the way my name is written in the version info
+
+  [ Santiago Ruano Rincón ]
+  * Declare Josué as New Mainainer and Myself as Uploader. Thanks Guus!
+    (Closes: #963891)
+
+ -- Santiago Ruano Rincón <santiago@debian.org>  Wed, 30 Sep 2020 10:21:04 +0200
+
 ifupdown (0.8.35) unstable; urgency=medium
 
   [ Ondřej Nový ]
