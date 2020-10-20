@@ -15,7 +15,7 @@ ifupdown (0.8.36~1.gbp8ec8d5) UNRELEASED; urgency=medium
   * Change the way my name is written in the version info
 
   [ Santiago Ruano Rincón ]
-  * Declare Josué as New Mainainer and Myself as Uploader. Thanks Guus!
+  * Declare Josué as New Maintainer and Myself as Uploader. Thanks Guus!
     (Closes: #963891)
 
  -- Santiago Ruano Rincón <santiago@debian.org>  Wed, 30 Sep 2020 10:21:04 +0200
