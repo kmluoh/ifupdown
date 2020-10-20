@@ -205,7 +205,7 @@ method v4tunnel
 
 method 6to4
   description
-    This method may be used to setup an 6to4 tunnel. It requires
+    This method may be used to setup a 6to4 tunnel. It requires
     the *ip* command from the *iproute* package.
 
   options
