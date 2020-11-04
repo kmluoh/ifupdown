@@ -1,6 +1,4 @@
-ifupdown (0.8.36~1.gbp8ec8d5) UNRELEASED; urgency=medium
-
-  ** SNAPSHOT build @8ec8d5031c71200da224e69459d2d02aa2244ddd **
+ifupdown (0.8.36) unstable; urgency=low
 
   [ Janos Lenart ]
   * Fixed source interfaces.d/
@@ -17,11 +15,11 @@ ifupdown (0.8.36~1.gbp8ec8d5) UNRELEASED; urgency=medium
   * Change the way my name is written in the version info
 
   [ Santiago Ruano Rincón ]
-  * Declare Josué as New Maintainer and Myself as Uploader. Thanks Guus!
-    (Closes: #963891)
+  * Declare Josué as New Maintainer and Myself as Uploader. Thanks for your
+    work Guus! (Closes: #963891)
   * Add debian/salsa-ci.yml
 
-  [ Josue Ortega ]
+  [ Josué Ortega ]
   * Update package to use debhelper-compat (= 13)
   * Fix grammar errors on can.defn and inet6.defn files. Thanks
     to Ville Skyttä <ville.skytta@iki.fi> for the patch. (Closes: #966586)
@@ -32,7 +30,7 @@ ifupdown (0.8.36~1.gbp8ec8d5) UNRELEASED; urgency=medium
   * Fix race condition adding a static IPv6 default route on RA networks
     (Closes: #805445)
 
- -- Santiago Ruano Rincón <santiago@debian.org>  Wed, 21 Oct 2020 14:46:55 +0200
+ -- Santiago Ruano Rincón <santiago@debian.org>  Wed, 04 Nov 2020 07:37:13 +0100
 
 ifupdown (0.8.35) unstable; urgency=medium
 
