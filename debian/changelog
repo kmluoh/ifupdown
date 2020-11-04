@@ -26,6 +26,7 @@ ifupdown (0.8.36~1.gbp8ec8d5) UNRELEASED; urgency=medium
   * Fix grammar errors on can.defn and inet6.defn files. Thanks
     to Ville Skyttä <ville.skytta@iki.fi> for the patch. (Closes: #966586)
   * ifup.8: Update manpage maintainers name
+  * Bump Standards-Version to 4.5.0. No changes required.
 
   [ Bernhard Schmidt ]
   * Fix race condition adding a static IPv6 default route on RA networks
