@@ -419,7 +419,7 @@ static void parse_environment_variables(void) {
 			excludeint = realloc(excludeint, excludeints * sizeof *excludeint);
 			if (excludeint == NULL)
 				err(1, "realloc");
-			excludeint[excludeints - 1] = tok;
+			excludeint[excludeints - 1] = strdup(tok);
 		}
 		free(excludes);
 	}
