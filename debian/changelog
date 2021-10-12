@@ -1,6 +1,6 @@
-ifupdown (0.8.37~1.gbpb5e6e1) UNRELEASED; urgency=medium
+ifupdown (0.8.37~2.gbpeda035) UNRELEASED; urgency=medium
 
-  ** SNAPSHOT build @b5e6e15014db8e9c1850cd3f456faac9d07349a7 **
+  ** SNAPSHOT build @eda035fe45be47796cdfdac08e76694370764d3b **
 
   * Add debian/gbp.conf
   * Acknowledge 0.8.36+nmu1.
@@ -8,8 +8,10 @@ ifupdown (0.8.37~1.gbpb5e6e1) UNRELEASED; urgency=medium
     (Closes: #947234)
   * Correctly copy (duplicate) the interface to exclude with --read-environment. Thanks to Adam Stephens <adam.stephens@gmail.com>
     (Closes: #994745)
+  * Include restart-ms option in can config. Thanks to Joerg Dorchain <joerg@dorchain.net>
+    (Closes: #947233)
 
- -- Santiago Ruano Rincón <santiago@debian.org>  Wed, 22 Sep 2021 09:52:38 +0200
+ -- Santiago Ruano Rincón <santiago@debian.org>  Tue, 12 Oct 2021 15:55:56 +0200
 
 ifupdown (0.8.36+nmu1) unstable; urgency=medium
 
