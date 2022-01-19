@@ -1,4 +1,4 @@
-ifupdown (0.8.37) UNRELEASED; urgency=low
+ifupdown (0.8.37) unstable; urgency=low
 
   * Add debian/gbp.conf
   * Acknowledge 0.8.36+nmu1.
@@ -9,7 +9,7 @@ ifupdown (0.8.37) UNRELEASED; urgency=low
   * Include restart-ms option in can config. Thanks to Joerg Dorchain <joerg@dorchain.net>
     (Closes: #947233)
 
- -- Santiago Ruano Rincón <santiago@debian.org>  Wed, 19 Jan 2022 17:50:29 +0100
+ -- Santiago Ruano Rincón <santiago@debian.org>  Wed, 19 Jan 2022 20:55:17 +0100
 
 ifupdown (0.8.36+nmu1) unstable; urgency=medium
 
