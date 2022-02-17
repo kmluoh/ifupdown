@@ -92,6 +92,7 @@ method dhcp
     vendor vendor_id        -- Vendor class identifier (dhcpcd)
     client client_id        -- Client identifier (dhcpcd), or "no" (dhclient)
     hwaddress address       -- Hardware address.
+    dhcpargs                -- Other arguments to pass to dhcp client (udhcpc)
 
   conversion
     hwaddress cleanup_hwaddress
@@ -103,7 +104,7 @@ method dhcp
         if (execable("/sbin/dhclient"))
     /sbin/pump -i %iface% [[-h %hostname%]] [[-l %leasehours%]] \
         elsif (execable("/sbin/pump"))
-    /sbin/udhcpc -n -p /run/udhcpc.%iface%.pid -i %iface% [[-x hostname:%hostname%]] \
+    /sbin/udhcpc %dhcpargs% -p /run/udhcpc.%iface%.pid -i %iface% [[-x hostname:%hostname%]] \
         elsif (execable("/sbin/udhcpc"))
     /sbin/dhcpcd [[-h %hostname%]] [[-i %vendor%]] [[-I %client%]] \
            [[-l %leasetime%]] [[-m %metric%]] %iface% \
