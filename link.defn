@@ -27,8 +27,10 @@ method none
 	if (iface_is_lo())
     [[ip link set %iface0% alias "%description%"]]
   down
-    if test `cat /sys/class/net/%link%/type` -eq 32; then \
-        echo 0x%vlan_id1% > /sys/class/net/%link%/delete_child; \
+    if test -d /sys/class/net/%link%/device/infiniband; then \
+        if test `cat /sys/class/net/%link%/type` -eq 32; then \
+            echo 0x%vlan_id1% > /sys/class/net/%link%/delete_child; \
+        fi \
     else \
         ip link del %iface%; \
     fi if (iface_has(".") && !iface_has(":"))
