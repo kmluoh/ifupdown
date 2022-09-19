@@ -12,7 +12,7 @@ Rules-Requires-Root: no
 Package: ifupdown
 Architecture: any
 Depends: ${net:Depends}, ${shlibs:Depends}, ${misc:Depends},
- lsb-base, adduser,
+ adduser,
  iproute2 [linux-any], freebsd-net-tools [kfreebsd-any], inetutils-tools [hurd-any]
 Recommends: isc-dhcp-client | dhcp-client
 Suggests: ppp, rdnssd, ${net:Suggests}
