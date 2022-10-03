@@ -1,3 +1,19 @@
+ifupdown (0.8.38) unstable; urgency=low
+
+  [ Johannes Schauer Marin Rodrigues ]
+  * Remove dependency on lsb-base (Closes: #1020604)
+
+  [ Santiago Ruano Rincón ]
+  * Remove pump support (no longer in Debian archive)
+  * Fix error message when turning down VLAN interfaces. Thanks to Aleksandr
+    Muravjov (Closes: #1007889)
+  * Ship Ubuntu's integration scripts for systemd-resolved. Thanks to Luca
+    Boccassi (Closes: #1016798)
+  * Add rfkill support. Thanks to Sebastian Reichel <sre@debian.org>
+    (Closes: #645559)
+
+ -- Santiago Ruano Rincón <santiago@debian.org>  Mon, 03 Oct 2022 16:24:38 +0200
+
 ifupdown (0.8.37) unstable; urgency=low
 
   * Add debian/gbp.conf
