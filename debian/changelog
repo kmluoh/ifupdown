@@ -1,11 +1,9 @@
-ifupdown (0.8.39~1.gbp373343) UNRELEASED; urgency=medium
-
-  ** SNAPSHOT build @37334372bcea18fc32be490245dbb08bda0a9930 **
+ifupdown (0.8.39) unstable; urgency=low
 
   * Add execution permission on resolved scripts. Thanks to Vincent Lefèvre
     (Closes: #1021259)
 
- -- Santiago Ruano Rincón <santiago@debian.org>  Tue, 04 Oct 2022 16:41:45 +0200
+ -- Santiago Ruano Rincón <santiago@debian.org>  Tue, 04 Oct 2022 17:24:23 +0200
 
 ifupdown (0.8.38) unstable; urgency=low
 
