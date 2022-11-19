@@ -1848,4 +1848,3 @@ ifupdown (0.5.5-1) unstable; urgency=low
   * Split from netbase.
 
  -- Anthony Towns <ajt@debian.org>  Mon, 17 Jul 2000 08:24:56 +1000
-
