@@ -37,6 +37,10 @@ method auto
         elsif (var_true("dhcp", ifd))
 
   down
+    /sbin/dhclient -6 -v -r -pf /run/dhclient6.%iface%.pid -lf /var/lib/dhcp/dhclient6.%iface%.leases -I -df /var/lib/dhcp/dhclient.%iface%.leases %iface% \
+        if (var_true("dhcp", ifd) && execable("/sbin/dhclient"))
+    echo 'No DHCPv6 client software found!' >&2; false \
+        elsif (var_true("dhcp", ifd))
     ip -6 addr flush dev %iface% scope global
     ip link set dev %iface% down \
 		if (iface_is_link())
