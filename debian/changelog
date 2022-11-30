@@ -1,8 +1,19 @@
-ifupdown (0.8.40) UNRELEASED; urgency=medium
+ifupdown (0.8.40~1.gbpfeb536) UNRELEASED; urgency=medium
 
+  ** SNAPSHOT build @feb5366fca864fa75d3bc2a9eab220ebc91163d5 **
+
+  [ Colin Watson ]
   * Clarify formatting of post-up and pre-down aliases in interfaces(5).
 
- -- Colin Watson <cjwatson@debian.org>  Tue, 22 Nov 2022 14:59:20 +0000
+  [ Vincent Bernat ]
+  * Kill dhclient on down for inet6 auto method. (Closes: #1000180)
+
+  [ Santiago Ruano Rincón ]
+  * networking.service: Wants ifupdown-pre.service instead of Requiring it.
+    Patch by Ron <ron@debian.org>
+    (Closes: #998088)
+
+ -- Santiago Ruano Rincón <santiago@debian.org>  Tue, 29 Nov 2022 17:59:16 +0100
 
 ifupdown (0.8.39) unstable; urgency=low
 
