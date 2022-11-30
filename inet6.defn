@@ -191,9 +191,10 @@ method tunnel
     gateway address       -- Default gateway (colon delimited)
     ttl time              -- TTL setting
     mtu size              -- MTU size
+    encaplimit limit      -- Encapsulation limit ("none" or integer)
   up
     ip -6 tunnel add %iface% mode %mode% remote %endpoint% [[local %local%]] \
-       [[ttl %ttl%]]
+       [[ttl %ttl%]] [[encaplimit %encaplimit%]]
     ip link set %iface% up [[mtu %mtu%]]
     [[ ip -6 addr add %address%/%netmask% dev %iface% [[peer %dstaddr%]] ]]
     [[ ip -6 route add ::/0 via %gateway% [[metric %metric%]] dev %iface% onlink ]]
