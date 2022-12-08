@@ -1,6 +1,6 @@
-ifupdown (0.8.40~1.gbpfeb536) UNRELEASED; urgency=medium
+ifupdown (0.8.40~2.gbpf374fc) UNRELEASED; urgency=medium
 
-  ** SNAPSHOT build @feb5366fca864fa75d3bc2a9eab220ebc91163d5 **
+  ** SNAPSHOT build @f374fcd776616315aae514729797349216482526 **
 
   [ Colin Watson ]
   * Clarify formatting of post-up and pre-down aliases in interfaces(5).
@@ -12,8 +12,10 @@ ifupdown (0.8.40~1.gbpfeb536) UNRELEASED; urgency=medium
   * networking.service: Wants ifupdown-pre.service instead of Requiring it.
     Patch by Ron <ron@debian.org>
     (Closes: #998088)
+  * networking.service: Add ExecStart=/sbin/ifup -a --allow=hotplug. Patch by "Oleg A. Arkhangelsky" <sysoleg@yandex.ru>
+    (Closes: #1022843)
 
- -- Santiago Ruano Rincón <santiago@debian.org>  Tue, 29 Nov 2022 17:59:16 +0100
+ -- Santiago Ruano Rincón <santiago@debian.org>  Wed, 30 Nov 2022 16:02:48 +0100
 
 ifupdown (0.8.39) unstable; urgency=low
 
