@@ -174,6 +174,39 @@ method dhcp
     ip link set dev %iface% down \
 		if (iface_is_link())
 
+method tunnel
+  description
+    This method is used to create IP6GRE, IP6IP6 or IPIP6 tunnels. You need to
+    have the *ip* binary from the *iproute* package. For IP6GRE tunnels, you
+    will need to load the ip6_gre module and the ip6_tunnel module for
+    IP6IP6 or IPIP6 tunnels.
+  options
+    address address       -- Local Address (colon delimited)
+    netmask mask          -- Netmask (number of bits, eg 64)
+    mode type             -- Tunnel type (either IP6GRE, IP6IP6 or IPIP6) *required*
+    endpoint address      -- Address of other tunnel endpoint (colon delimited) *required*
+    dstaddr address       -- Remote address (remote address inside tunnel)
+    local address         -- Address of the local endpoint (colon delimited)
+    metric metric         -- Routing metric for default gateway (integer)
+    gateway address       -- Default gateway (colon delimited)
+    ttl time              -- TTL setting
+    mtu size              -- MTU size
+    encaplimit limit      -- Encapsulation limit ("none" or integer)
+  up
+    ip -6 tunnel add %iface% mode %mode% remote %endpoint% [[local %local%]] \
+       [[ttl %ttl%]] [[encaplimit %encaplimit%]]
+    ip link set %iface% up [[mtu %mtu%]]
+    [[ip -4 addr add %address%/%netmask% dev %iface% [[peer %dstaddr%]] ]] \
+      if (!var_strcasecmp("mode", "ipip6"))
+    [[ip -4 route add 0.0.0.0/0 via %gateway% [[metric %metric%]] dev %iface% onlink ]] \
+      if (!var_strcasecmp("mode", "ipip6"))
+    [[ip -6 addr add %address%/%netmask% dev %iface% [[peer %dstaddr%]] ]] \
+      if (var_strcasecmp("mode", "ipip6"))
+    [[ip -6 route add ::/0 via %gateway% [[metric %metric%]] dev %iface% onlink ]] \
+      if (var_strcasecmp("mode", "ipip6"))
+  down
+    ip -6 tunnel del %iface%
+
 method v4tunnel
   description
     This method may be used to setup an IPv6-over-IPv4 tunnel. It requires
