@@ -11,10 +11,10 @@ ip link set dev eth0   up
 run-parts --exit-on-error --verbose /etc/network/if-up.d
 ifup: configuring interface eth0=eth0 (inet6)
 run-parts --exit-on-error --verbose /etc/network/if-pre-up.d
-/sbin/modprobe -q net-pf-10 > /dev/null 2>&1 || true # ignore failure.
-/sbin/sysctl -q -e -w net.ipv6.conf.eth0.use_tempaddr=2
-/sbin/sysctl -q -e -w net.ipv6.conf.eth0.accept_ra=0
-/sbin/sysctl -q -e -w net.ipv6.conf.eth0.autoconf=0
+modprobe -q net-pf-10 > /dev/null 2>&1 || true # ignore failure.
+sysctl -q -e -w net.ipv6.conf.eth0.use_tempaddr=2
+sysctl -q -e -w net.ipv6.conf.eth0.accept_ra=0
+sysctl -q -e -w net.ipv6.conf.eth0.autoconf=0
 
 ip addr flush dev eth0 mngtmpaddr
 ip link set dev eth0  up
@@ -30,10 +30,10 @@ ip link set dev eth0   up
 run-parts --exit-on-error --verbose /etc/network/if-up.d
 ifup: configuring interface eth0=eth0 (inet6)
 run-parts --exit-on-error --verbose /etc/network/if-pre-up.d
-/sbin/modprobe -q net-pf-10 > /dev/null 2>&1 || true # ignore failure.
-/sbin/sysctl -q -e -w net.ipv6.conf.eth0.use_tempaddr=2
-/sbin/sysctl -q -e -w net.ipv6.conf.eth0.accept_ra=0
-/sbin/sysctl -q -e -w net.ipv6.conf.eth0.autoconf=0
+modprobe -q net-pf-10 > /dev/null 2>&1 || true # ignore failure.
+sysctl -q -e -w net.ipv6.conf.eth0.use_tempaddr=2
+sysctl -q -e -w net.ipv6.conf.eth0.accept_ra=0
+sysctl -q -e -w net.ipv6.conf.eth0.autoconf=0
 
 ip addr flush dev eth0 mngtmpaddr
 ip link set dev eth0  up
@@ -44,10 +44,10 @@ if test -d /sys/class/net/eth0 &&     	! ip link show eth0.1 >/dev/null 2>&1;   
 
 ifup: configuring interface eth0.1=eth0.1 (inet6)
 run-parts --exit-on-error --verbose /etc/network/if-pre-up.d
-/sbin/modprobe -q net-pf-10 > /dev/null 2>&1 || true # ignore failure.
+modprobe -q net-pf-10 > /dev/null 2>&1 || true # ignore failure.
 
 
-/sbin/sysctl -q -e -w net.ipv6.conf.eth0/1.autoconf=0
+sysctl -q -e -w net.ipv6.conf.eth0/1.autoconf=0
 
 ip link set dev eth0.1  up
 ip -6 addr add 3ffe:ffff:120:f101::1/64  dev eth0.1  nodad
@@ -62,10 +62,10 @@ ip link set dev eth0   up
 run-parts --exit-on-error --verbose /etc/network/if-up.d
 ifup: configuring interface eth0=eth0 (inet6)
 run-parts --exit-on-error --verbose /etc/network/if-pre-up.d
-/sbin/modprobe -q net-pf-10 > /dev/null 2>&1 || true # ignore failure.
-/sbin/sysctl -q -e -w net.ipv6.conf.eth0.use_tempaddr=2
-/sbin/sysctl -q -e -w net.ipv6.conf.eth0.accept_ra=0
-/sbin/sysctl -q -e -w net.ipv6.conf.eth0.autoconf=0
+modprobe -q net-pf-10 > /dev/null 2>&1 || true # ignore failure.
+sysctl -q -e -w net.ipv6.conf.eth0.use_tempaddr=2
+sysctl -q -e -w net.ipv6.conf.eth0.accept_ra=0
+sysctl -q -e -w net.ipv6.conf.eth0.autoconf=0
 
 ip addr flush dev eth0 mngtmpaddr
 ip link set dev eth0  up
@@ -99,7 +99,7 @@ run-parts --exit-on-error --verbose /etc/network/if-up.d
 
 ifup: configuring interface tunnel=tunnel (inet6)
 run-parts --exit-on-error --verbose /etc/network/if-pre-up.d
-/sbin/modprobe -q net-pf-10 > /dev/null 2>&1 || true # ignore failure.
+modprobe -q net-pf-10 > /dev/null 2>&1 || true # ignore failure.
 ip tunnel add tunnel mode sit remote any local 1.2.3.4        
 ip link set tunnel up 
 ip addr add 2002:0102:0304::1/16 dev tunnel 

@@ -49,17 +49,17 @@ method none
     description description -- Link description []
 
   up
-    -/sbin/ifconfig %iface% 127.0.0.1 up \
+    -ifconfig %iface% 127.0.0.1 up \
 	if (iface_is_lo())
-    -/sbin/ifconfig %iface% inet6 ::1 \
+    -ifconfig %iface% inet6 ::1 \
 	if (iface_is_lo())
-    [[-/sbin/ifconfig %iface% desc "%description%"]]
+    [[-ifconfig %iface% desc "%description%"]]
   down
-    -/sbin/ifconfig %iface% down \
+    -ifconfig %iface% down \
 	if (iface_is_lo())
-    [[-test -n "%description%" && /sbin/ifconfig %iface% -desc]]
+    [[-test -n "%description%" && ifconfig %iface% -desc]]
   rename
-    /sbin/ifconfig %iface% name %newname%
+    ifconfig %iface% name %newname%
 
 architecture hurd
 
