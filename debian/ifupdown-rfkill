@@ -3,6 +3,8 @@ CHANGE=$3
 SYSFS=$1
 DEVICE=$SYSFS$2
 
+PATH='/sbin:/bin:/usr/sbin:/usr/bin'
+
 if [ -e $DEVICE ] ; then
 	while [ $DEVICE != $SYSFS ] ; do
 		DEVICE=`dirname $DEVICE`
@@ -12,8 +14,8 @@ if [ -e $DEVICE ] ; then
 				INTERFACE=`basename $INTERFACE`
 				
 				case $CHANGE in
-					"1")     /sbin/ifup   --allow=rfkill $INTERFACE ;;
-					"0"|"2") /sbin/ifdown --allow=rfkill $INTERFACE ;;
+					"1")     ifup   --allow=rfkill $INTERFACE ;;
+					"0"|"2") ifdown --allow=rfkill $INTERFACE ;;
 				esac
 			done
 		fi
