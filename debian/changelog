@@ -1,6 +1,4 @@
-ifupdown (0.8.40~2.gbpf374fc) UNRELEASED; urgency=medium
-
-  ** SNAPSHOT build @f374fcd776616315aae514729797349216482526 **
+ifupdown (0.8.40) unstable; urgency=medium
 
   [ Colin Watson ]
   * Clarify formatting of post-up and pre-down aliases in interfaces(5).
@@ -12,10 +10,24 @@ ifupdown (0.8.40~2.gbpf374fc) UNRELEASED; urgency=medium
   * networking.service: Wants ifupdown-pre.service instead of Requiring it.
     Patch by Ron <ron@debian.org>
     (Closes: #998088)
-  * networking.service: Add ExecStart=/sbin/ifup -a --allow=hotplug. Patch by "Oleg A. Arkhangelsky" <sysoleg@yandex.ru>
+  * networking.service: Add ExecStart=/sbin/ifup -a --allow=hotplug. Patch by
+    "Oleg A. Arkhangelsky" <sysoleg@yandex.ru>
     (Closes: #1022843)
+  * Update d/copyright and fix Source URL
 
- -- Santiago Ruano Rincón <santiago@debian.org>  Wed, 30 Nov 2022 16:02:48 +0100
+  [ Marek Vasut ]
+  * Add short -f option for --force long option
+
+  [ Simon Arlott ]
+  * Support IPv6 tunnels (ip6ip6 and ip6gre)
+  * Support encaplimit on IPv6 tunnels
+  * Document and test support for ipip6 tunnels too (IPv4 in IPv6)
+
+  [ Guillem Jover ]
+  * Rework execable() function to accept a filename instead of a pathname
+  * Do not use absolute pathnames when executing commands
+
+ -- Santiago Ruano Rincón <santiago@debian.org>  Mon, 16 Jan 2023 14:57:59 +0100
 
 ifupdown (0.8.39) unstable; urgency=low
 
