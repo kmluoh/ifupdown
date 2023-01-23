@@ -1,3 +1,12 @@
+ifupdown (0.8.41~1.gbp3a6fae) UNRELEASED; urgency=medium
+
+  ** SNAPSHOT build @3a6fae14ad21657b82a75181dd0c9a2c1f750a6b **
+
+  * networking.service: Prefix ExecStart command with '-' instead of --ignore-errors. Thanks to Pascal Hambourg <pascal@plouf.fr.eu.org>
+    (Closes: #1022843)
+
+ -- Santiago Ruano Rincón <santiago@debian.org>  Mon, 23 Jan 2023 14:32:29 +0100
+
 ifupdown (0.8.40) unstable; urgency=medium
 
   [ Colin Watson ]
