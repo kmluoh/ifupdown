@@ -15,7 +15,8 @@ WantedBy=network-online.target
 Type=oneshot
 EnvironmentFile=-/etc/default/networking
 ExecStart=/sbin/ifup -a --read-environment
-ExecStart=/sbin/ifup -a --allow=hotplug --ignore-errors --read-environment
+ExecStart=-/bin/sh -c 'if [ -f /run/network/restart-hotplug ]; then /sbin/ifup -a --read-environment --allow=hotplug; fi'
 ExecStop=/sbin/ifdown -a --read-environment --exclude=lo
+ExecStopPost=/usr/bin/touch /run/network/restart-hotplug
 RemainAfterExit=true
 TimeoutStartSec=5min
