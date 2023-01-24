@@ -1,3 +1,13 @@
+ifupdown (0.8.41~1.gbpf88b88) UNRELEASED; urgency=medium
+
+  ** SNAPSHOT build @f88b889d0cf79a1f4e9ad70684a393ea24d151fd **
+
+  * networking.service: Improve how to handle hotplug devices. Thanks to kibi, Oleg A. Arkhangelsky <sysoleg@yandex.ru>, et al.
+    (Closes: #1022843)
+  * d/tests/hotplug: add more tests, including unplugged dummy interface
+
+ -- Santiago Ruano Rincón <santiago@debian.org>  Tue, 24 Jan 2023 11:51:50 +0100
+
 ifupdown (0.8.40) unstable; urgency=medium
 
   [ Colin Watson ]
