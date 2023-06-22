@@ -1,3 +1,11 @@
+ifupdown (0.8.42) unstable; urgency=medium
+
+  * Fix if-up.d/resolved hook to properly work with nameservers and search
+    domains. Thanks to Dmytro Kolesnykov and Ken Milmore for the bug report
+    and a proposed patch. (Closes: #1031236)
+
+ -- Uwe Kleine-König <ukleinek@debian.org>  Wed, 21 Jun 2023 18:18:20 +0200
+
 ifupdown (0.8.41) unstable; urgency=high
 
   * networking.service: Improve how to handle hotplug devices. Thanks to kibi,
