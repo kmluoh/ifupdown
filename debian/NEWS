@@ -1,3 +1,10 @@
+ifupdown (0.8.42) unstable; urgency=medium
+
+  Given the isc-dhcp deprecation, ifupdown is now Recommending
+  dhcpcd-base | dhcp-client, instead of isc-dhcp-client.
+
+ -- Santiago Ruano Rincón <santiago@debian.org>  Wed, 28 Jun 2023 11:29:20 -0300
+
 ifupdown (0.8.34) unstable; urgency=medium
 
   VLAN interfaces that are marked allow-hotplug are now brought up
