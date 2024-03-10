@@ -1,10 +1,20 @@
-ifupdown (0.8.42) unstable; urgency=medium
+ifupdown (0.8.42~1.gbp51c00a) UNRELEASED; urgency=medium
 
+  ** SNAPSHOT build @51c00a7b54915a431d51ec93c30fcb983f6b0b8d **
+
+  [ Uwe Kleine-König ]
   * Fix if-up.d/resolved hook to properly work with nameservers and search
     domains. Thanks to Dmytro Kolesnykov and Ken Milmore for the bug report
     and a proposed patch. (Closes: #1031236)
 
- -- Uwe Kleine-König <ukleinek@debian.org>  Wed, 21 Jun 2023 18:18:20 +0200
+  [ Guillem Jover ]
+  * Use relative names when executing programs
+
+  [ Santiago Ruano Rincón ]
+  * DEP17: Move files to /usr. Thanks to Helmut Grohne <helmut@subdivi.de>
+    (Closes: #1059919)
+
+ -- Santiago Ruano Rincón <santiago@debian.org>  Sun, 10 Mar 2024 16:30:09 -0300
 
 ifupdown (0.8.41) unstable; urgency=high
 
