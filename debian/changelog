@@ -1,6 +1,4 @@
-ifupdown (0.8.42~1.gbp51c00a) UNRELEASED; urgency=medium
-
-  ** SNAPSHOT build @51c00a7b54915a431d51ec93c30fcb983f6b0b8d **
+ifupdown (0.8.42) unstable; urgency=medium
 
   [ Uwe Kleine-König ]
   * Fix if-up.d/resolved hook to properly work with nameservers and search
@@ -14,7 +12,7 @@ ifupdown (0.8.42~1.gbp51c00a) UNRELEASED; urgency=medium
   * DEP17: Move files to /usr. Thanks to Helmut Grohne <helmut@subdivi.de>
     (Closes: #1059919)
 
- -- Santiago Ruano Rincón <santiago@debian.org>  Sun, 10 Mar 2024 16:30:09 -0300
+ -- Santiago Ruano Rincón <santiago@debian.org>  Sun, 10 Mar 2024 17:17:50 -0300
 
 ifupdown (0.8.41) unstable; urgency=high
 
