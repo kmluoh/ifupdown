@@ -1,3 +1,10 @@
+ifupdown (0.8.43) unstable; urgency=medium
+
+  * Install remaining /lib files in /usr, by setting PKGLIBDIR in
+    debian/rules. Thanks to Helmut Grohne
+
+ -- Santiago Ruano Rincón <santiago@debian.org>  Tue, 12 Mar 2024 08:45:09 -0300
+
 ifupdown (0.8.42) unstable; urgency=medium
 
   [ Uwe Kleine-König ]
