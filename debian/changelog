@@ -1,3 +1,13 @@
+ifupdown (0.8.43+nmu1) UNRELEASED; urgency=medium
+
+  * Non-maintainer upload.
+  * Support dhcpcd as DHCP(v6) client for 'inet6 auto'/'inet6 dhcp'
+    interfaces (and limit dhcpcd interface configuration to IPv4 when
+    configured to use 'inet dhcp' mode without inet6 config).
+    (Closes: #1065085)
+
+ -- Kai Tetzlaff <debian@tetzco.de>  Fri, 15 Mar 2024 14:29:34 +0100
+
 ifupdown (0.8.43) unstable; urgency=medium
 
   * Install remaining /lib files in /usr, by setting PKGLIBDIR in
