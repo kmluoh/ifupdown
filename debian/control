@@ -14,7 +14,7 @@ Architecture: any
 Depends: ${net:Depends}, ${shlibs:Depends}, ${misc:Depends},
  adduser,
  iproute2 [linux-any], freebsd-net-tools [kfreebsd-any], inetutils-tools [hurd-any]
-Recommends: isc-dhcp-client | dhcp-client
+Recommends: dhcpcd-base | dhcp-client
 Suggests: ppp, rdnssd, ${net:Suggests}
 Replaces: systemd (<< 228-3~)
 Breaks: systemd (<< 228-3~)
