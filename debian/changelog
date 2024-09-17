@@ -1,3 +1,20 @@
+ifupdown (0.8.44) unstable; urgency=low
+
+  [ Debian Janitor ]
+  * Remove constraints unnecessary since buster (oldstable)
+
+  [ MichaIng ]
+  * Remove Conflicts=shutdown.target from ifup@.service
+  * Remove obsolete workaround from ifup@.service
+
+  [ Martin-Éric RACINE ]
+  * [control] Recommends from isc-dhcp-client to dhcpcd-base
+
+  [ Santiago Ruano Rincón ]
+  * Change Maintainer to the Networking team
+
+ -- Santiago Ruano Rincón <santiago@debian.org>  Tue, 17 Sep 2024 09:08:12 -0300
+
 ifupdown (0.8.43) unstable; urgency=medium
 
   * Install remaining /lib files in /usr, by setting PKGLIBDIR in
