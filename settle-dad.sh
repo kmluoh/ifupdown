@@ -13,18 +13,16 @@ for attempt in $(seq 1 $attempts); do
 		attempt=0 # This might have been our last attempt, but successful
 		break
 	fi
+	dadfailed=$(ip -o -6 address list dev "$IFACE" to "${IF_ADDRESS}/${IF_NETMASK}" dadfailed | wc -l)
+        if [ $dadfailed -ge 1 ]; then
+	        echo "Failed"
+	        exit 1
+        fi
 	sleep $delay
 done
 
 if [ $attempt -eq $attempts ]; then
 	echo "Timed out"
-	exit 1
-fi
-
-dadfailed=$(ip -o -6 address list dev "$IFACE" to "${IF_ADDRESS}/${IF_NETMASK}" dadfailed | wc -l)
-
-if [ $dadfailed -ge 1 ]; then
-	echo "Failed"
 	exit 1
 fi
 
