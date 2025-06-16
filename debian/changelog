@@ -1,3 +1,9 @@
+ifupdown (0.8.44~bpo12+0) bookworm-backports; urgency=low
+
+  * Rebuild for bookworm-backports
+
+ -- Keh-Ming Luoh <kmluoh@gmail.com>  Mon, 16 Jun 2025 11:59:26 -0700
+
 ifupdown (0.8.44) unstable; urgency=low
 
   [ Debian Janitor ]
